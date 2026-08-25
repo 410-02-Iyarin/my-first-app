@@ -12,4 +12,12 @@ if st.botton("คำนวนค่าBMI📝"):
     bmi=weight_cm/(height_m**2)
 
     st.write("---")
-    st.header(f"ค่าbmiของคุณคือ:{bmi:2f})
+    st.header(f"ค่าbmiของคุณคือ:**{bmi:2f}**")
+
+if bmi < 18.5:
+    st.warning(" คุณมีน้ำหนักน้อยกว่าเกณฑ์(ผอม)")
+elif 18.5 <= bmi < 23.0:
+    st.info("คุณมีน้ำหนักอยู่ในเกณฑ์ปกติ(๋๊สุขภาพดี)")
+elif 23.0 <= bmi < 25.0:
+    st.info("คุณเริ่มน้ำหนักเกินเกณฑ์(๋๊ท่วม)")
+        
